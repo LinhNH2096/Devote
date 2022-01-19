@@ -10,6 +10,8 @@ import SwiftUI
 struct NewTaskInputView: View {
     
     // MARK: - Properties
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
+    
     @Environment(\.managedObjectContext) private var viewContext
     
     @State private var newTask: String = ""
@@ -52,7 +54,7 @@ struct NewTaskInputView: View {
                     .font(.system(size: 24, weight: .bold, design: .rounded))
                     .padding()
                     .background(
-                        Color(UIColor.systemGray6)
+                        isDarkMode ? Color(UIColor.tertiarySystemBackground) : Color(UIColor.secondarySystemBackground)
                     )
                     .cornerRadius(10)
                 
@@ -74,7 +76,7 @@ struct NewTaskInputView: View {
             .padding(.vertical, 18)
             .padding(.horizontal, 20)
             .background(
-                Color.white
+                isDarkMode ? Color(UIColor.secondarySystemBackground) : Color.white
             )
             .cornerRadius(12)
             .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.65), radius: 24)
