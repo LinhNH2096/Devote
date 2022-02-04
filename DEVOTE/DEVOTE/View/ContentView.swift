@@ -98,17 +98,7 @@ struct ContentView: View {
                     // MARK: - List Task
                     List {
                         ForEach(items) { item in
-                            NavigationLink {
-                                Text("Item at \(item.timestamp!, formatter: dateFormatter)")
-                            } label: {
-                                VStack(alignment: .leading, spacing: 8) {
-                                    Text(item.task ?? "")
-                                        .font(.headline)
-                                    Text(item.timestamp!, formatter: dateFormatter)
-                                        .font(.footnote)
-                                        .foregroundColor(Color(UIColor.gray))
-                                }
-                            }
+                            ListRowItemView(item: item)
                         }
                         .onDelete(perform: deleteItems)
                     } //: List
