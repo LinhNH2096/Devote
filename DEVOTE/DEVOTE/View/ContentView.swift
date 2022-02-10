@@ -64,6 +64,7 @@ struct ContentView: View {
                         // Appearance Button
                         Button {
                             isDarkMode.toggle()
+                            playSound(soundName: "sound-tap")
                         } label: {
                             Image(systemName: isDarkMode ? "moon.circle.fill" : "moon.circle")
                                 .resizable()
@@ -80,6 +81,8 @@ struct ContentView: View {
                     // MARK: - Add Task Button
                     Button {
                         isShowInputTask = true
+                        playSound(soundName: "sound-ding")
+                        
                     } label: {
                         Image(systemName: "plus.circle")
                             .font(.system(size: 30, weight: .semibold, design: .rounded))

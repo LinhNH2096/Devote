@@ -60,7 +60,7 @@ struct NewTaskInputView: View {
                 
                 Button {
                     addItem()
-                   
+                    playSound(soundName: "sound-ding")
                 } label: {
                     Spacer()
                     Text("SAVE")
@@ -68,6 +68,11 @@ struct NewTaskInputView: View {
                     Spacer()
                 }
                 .disabled(!isValidTask)
+                .onTapGesture {
+                    if !isValidTask {
+                        playSound(soundName: "sound-tap")
+                    }
+                }
                 .padding()
                 .foregroundColor(.white)
                 .background(isValidTask ? Color.pink : Color.blue)
