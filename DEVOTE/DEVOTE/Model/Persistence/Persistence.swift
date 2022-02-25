@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import SwiftUI
 
 struct PersistenceController {
     // MARK: - Persistence Controller
@@ -46,4 +47,10 @@ struct PersistenceController {
         }
         return result
     }()
+}
+
+struct Persistence_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
 }

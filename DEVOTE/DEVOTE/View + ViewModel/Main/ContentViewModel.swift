@@ -5,4 +5,10 @@
 //  Created by Nguyễn Hồng Lĩnh on 18/02/2022.
 //
 
-import Foundation
+import SwiftUI
+
+final class ContentViewModel: ObservableObject {
+    
+    // MARK: Properties
+   
+}

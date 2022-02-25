@@ -11,19 +11,14 @@ import CoreData
 struct ContentView: View {
     
     // MARK: - Properties
-    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
-    
-    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.managedObjectContext) var viewContext
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: false)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-    
-    @State private var isShowInputTask: Bool = false
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: false)], animation: .default) var items: FetchedResults<Item>
+    @AppStorage("isDarkMode") var isDarkMode: Bool = false
+    @State var isShowInputTask: Bool = false
     
     // MARK: - Function
-    private func deleteItems(offsets: IndexSet) {
+    func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { items[$0] }.forEach(viewContext.delete)
 
