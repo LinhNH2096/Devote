@@ -29,6 +29,7 @@
 		4140AFF827C8C9A9008A16E3 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 4140AFF727C8C9A9008A16E3 /* FirebaseDynamicLinks */; };
 		4140AFFA27C8C9A9008A16E3 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 4140AFF927C8C9A9008A16E3 /* FirebaseMessaging */; };
 		4140AFFC27C8D231008A16E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4140AFFB27C8D231008A16E3 /* GoogleService-Info.plist */; };
+		4140AFFF27C8D934008A16E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4140AFFE27C8D934008A16E3 /* AppDelegate.swift */; };
 		4147F6C327B515490010B9AD /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4147F6C227B515490010B9AD /* SoundPlayer.swift */; };
 		4147F6CB27B6A7450010B9AD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4147F6CA27B6A7450010B9AD /* WidgetKit.framework */; };
 		4147F6CD27B6A7450010B9AD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4147F6CC27B6A7450010B9AD /* SwiftUI.framework */; };
@@ -99,6 +100,7 @@
 		4140AFE827C4D8BF008A16E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4140AFF127C8C574008A16E3 /* DEVOTE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DEVOTE.entitlements; sourceTree = "<group>"; };
 		4140AFFB27C8D231008A16E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4140AFFE27C8D934008A16E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4147F6C227B515490010B9AD /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		4147F6C827B6A7450010B9AD /* DevoteWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DevoteWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4147F6CA27B6A7450010B9AD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -252,6 +254,14 @@
 			path = DevoteWidgetIntent;
 			sourceTree = "<group>";
 		};
+		4140AFFD27C8D756008A16E3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4140AFFE27C8D934008A16E3 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		4147F6C927B6A7450010B9AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +305,7 @@
 		414F72FB27955B0100C0B269 /* DEVOTE */ = {
 			isa = PBXGroup;
 			children = (
+				4140AFFD27C8D756008A16E3 /* App */,
 				4140AFF127C8C574008A16E3 /* DEVOTE.entitlements */,
 				4140AFFB27C8D231008A16E3 /* GoogleService-Info.plist */,
 				412E9A542795644600B759DD /* Info.plist */,
@@ -503,6 +514,7 @@
 				41D9AB5D27ACD539008AD344 /* CheckBoxStyle.swift in Sources */,
 				414F730927955B0300C0B269 /* DEVOTE.xcdatamodeld in Sources */,
 				4147F6C327B515490010B9AD /* SoundPlayer.swift in Sources */,
+				4140AFFF27C8D934008A16E3 /* AppDelegate.swift in Sources */,
 				414F72FD27955B0100C0B269 /* DEVOTEApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
